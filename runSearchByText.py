@@ -30,7 +30,7 @@ topn = 10
 # Perform the search
 ###############################################################################
 
-print 'Searching by contents of input.txt...'
+print ('Searching by contents of input.txt...')
 
 # Perform the search.
 results = ssearch.findSimilarToVector(input_vec, topn=topn)
@@ -53,7 +53,7 @@ for i in range(0, topn):
     ssearch.interpretMatch(input_vec, result_vec, min_pos=0)
 
     # Wait for user input.
-    command = raw_input("[N]ext result  [F]ull text  [Q]uit\n: ").lower()
+    command = input("[N]ext result  [F]ull text  [Q]uit\n: ").lower()
         
     # q -> Quit.
     if (command == 'q'):

@@ -131,7 +131,7 @@ class KeySearch(object):
         Convert the text in the provided file to a tf-idf vector.
         """
         # Open the file and read all lines.        
-        with open(filename) as f:
+        with open(filename, encoding='utf8') as f:
             text = f.readlines()
 
         # Combine the lines into a single string.

@@ -271,7 +271,7 @@ class SimSearch(object):
             # Get the weights vector for this word. This vector has one weight
             # for each topic
             word_weights = np.asarray(self.lsi.projection.u[word_id, :]).flatten()
-
+            norms=1
             # Calculate the contribution of this word in doc1 to the total similarity.
             word_sims[word_id] = vec1_tfidf[word_id] * np.dot(word_weights, vec2_lsi) / norms;
           

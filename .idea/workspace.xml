@@ -18,9 +18,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c1d6390e-a572-4559-b85f-b35e1b502b08" name="Default Changelist" comment="print comment branch1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpusbuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/corpusbuilder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/keysearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/keysearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parseMHC.py" beforeDir="false" afterPath="$PROJECT_DIR$/parseMHC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runSearchByKeyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/runSearchByKeyword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runSearchByText.py" beforeDir="false" afterPath="$PROJECT_DIR$/runSearchByText.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/simsearch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.runSearchByText">
     <configuration name="parseMHC" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ir-project-ir-term-project-miray-kayhan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,8 +68,96 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="runSearchByDoc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ir-project-ir-term-project-miray-kayhan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\gokay\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runSearchByDoc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runSearchByKeyword" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ir-project-ir-term-project-miray-kayhan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\gokay\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runSearchByKeyword.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runSearchByText" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ir-project-ir-term-project-miray-kayhan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\gokay\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runSearchByText.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="simsearch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ir-project-ir-term-project-miray-kayhan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\gokay\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simsearch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.runSearchByText" />
+        <item itemvalue="Python.runSearchByKeyword" />
+        <item itemvalue="Python.runSearchByDoc" />
+        <item itemvalue="Python.simsearch" />
         <item itemvalue="Python.parseMHC" />
       </list>
     </recent_temporary>
@@ -127,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590220832339</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Loading files to Github">
+      <created>1590221902560</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590221902560</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,29 +262,45 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="484" y="8" key="#parseMHC/0.0.1536.824@0.0.1536.824" timestamp="1590220994760" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1590221642116">
+    <state x="484" y="8" key="#runSearchByDoc" timestamp="1590222178099">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590221642116" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1590221642116">
+    <state x="484" y="8" key="#runSearchByDoc/0.0.1536.824@0.0.1536.824" timestamp="1590222178099" />
+    <state x="484" y="8" key="#runSearchByKeyword" timestamp="1590222195760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590221642116" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1590221642116">
+    <state x="484" y="8" key="#runSearchByKeyword/0.0.1536.824@0.0.1536.824" timestamp="1590222195760" />
+    <state x="484" y="8" key="#runSearchByText" timestamp="1590222291385">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590221642116" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1590221642116">
+    <state x="484" y="8" key="#runSearchByText/0.0.1536.824@0.0.1536.824" timestamp="1590222291385" />
+    <state x="484" y="8" key="#simsearch" timestamp="1590222651873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590221642116" />
+    <state x="484" y="8" key="#simsearch/0.0.1536.824@0.0.1536.824" timestamp="1590222651873" />
+    <state width="1206" height="210" key="GridCell.Tab.0.bottom" timestamp="1590222651983">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1206" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590222651983" />
+    <state width="1206" height="210" key="GridCell.Tab.0.center" timestamp="1590222651982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1206" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590222651982" />
+    <state width="1206" height="210" key="GridCell.Tab.0.left" timestamp="1590222651982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1206" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590222651982" />
+    <state width="1206" height="210" key="GridCell.Tab.0.right" timestamp="1590222651982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1206" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590222651982" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1590217847000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590217847000" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590220851804">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590221920578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590220851804" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590221920578" />
   </component>
 </project>
