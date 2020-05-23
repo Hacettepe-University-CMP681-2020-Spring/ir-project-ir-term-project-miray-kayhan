@@ -1,0 +1,73 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+*.pyc
+mhc/mhc1.txt
+mhc/mhc2.txt
+mhc/mhc3.txt
+mhc/mhc4.txt
+mhc/mhc5.txt
+mhc/mhc6.txt
+mhc_backup/mhc2.txt
+mhc_backup/mhc3.txt
+mhc_backup/mhc4.txt
+mhc_backup/mhc5.txt
+mhc_backup/mhc6.txt
+mhc_corpus/documents.dict
+mhc_corpus/documents.tfidf_model
+mhc_corpus/tag-tables.pickle
+mhc_corpus/titles.pickle
+mhc_corpus/documents_tfidf.mm
+mhc_corpus/documents_tfidf.mm.index
+mhc_corpus/index.mm
+mhc_corpus/lsi.model
+mhc_corpus/lsi.model.projection
+confess.txt
+mhc_corpus/doc_line_nums.pickle
+mhc_backup/mhc1.txt
+corpusbuilder.py.bak
+simsearch.py.bak
