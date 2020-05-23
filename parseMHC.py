@@ -29,13 +29,13 @@ sub_patterns.append((r'\d+\.?', ' '))
 cb.setSubstitutions(sub_patterns)
                    
 
-print 'Parsing Matthew Henry\'s Commentary...'    
+print ('Parsing Matthew Henry\'s Commentary...')
 # Parse all of the text files in the directory.
 cb.addDirectory('./mhc/')
 
-print 'Done.'
+print ('Done.')
 
-print 'Building corpus...'
+print ('Building corpus...')
 
 cb.buildCorpus()
 
@@ -45,21 +45,21 @@ ksearch = cb.toKeySearch()
 # Print the top 30 most common words.
 ksearch.printTopNWords(topn=30)
 
-print '\nVocabulary contains', ksearch.getVocabSize(), 'unique words.'
+print ('\nVocabulary contains', ksearch.getVocabSize(), 'unique words.')
 
-print 'Corpus contains', len(ksearch.corpus_tfidf), '"documents" represented by tf-idf vectors.'
+print ('Corpus contains', len(ksearch.corpus_tfidf), '"documents" represented by tf-idf vectors.')
 
 # Initialize a SimSearch object from the KeySearch.
 ssearch = SimSearch(ksearch)
 
 # Train LSI with 100 topics.
-print '\nTraining LSI...'
+print ('\nTraining LSI...')
 ssearch.trainLSI(num_topics=300)
 
-print '\nSaving to disk...'
+print ('\nSaving to disk...')
 if not exists('./mhc_corpus/'):
     makedirs('./mhc_corpus/')
 
 ssearch.save(save_dir='./mhc_corpus/')
 
-print 'Done!'
+print ('Done!')

@@ -80,7 +80,7 @@ class KeySearch(object):
         Print all of the tags present in the corpus, plus the number of docs
         tagged with each.        
         """
-        print 'All tags in corpus (# of documents):'
+        print ('All tags in corpus (# of documents):')
         
         # Get all the tags and sort them alphabetically.
         tags = self.tagsToDocs.keys()
@@ -88,7 +88,7 @@ class KeySearch(object):
 
         # Print each tag followed by the number of documents.
         for tag in tags:
-            print '%20s %3d' % (tag, len(self.tagsToDocs[tag]))       
+            print ('%20s %3d' % (tag, len(self.tagsToDocs[tag])) )      
         
     def getTfidfForText(self, text):
         """
@@ -103,10 +103,10 @@ class KeySearch(object):
             try:    
                 text = text.decode(enc_format)        
             except:
-                print '======== Failed to decode input text! ========'
-                print 'Make sure text is encoded in', enc_format
-                print 'Input text:'
-                print text
+                print ('======== Failed to decode input text! ========')
+                print ('Make sure text is encoded in', enc_format)
+                print ('Input text:')
+                print (text)
                 return []
         
         # If the string ends in a newline, remove it.
@@ -178,7 +178,7 @@ class KeySearch(object):
             
             # Verify the word exists in the dictionary.
             if word_id == -1:
-                print 'WARNING: Word \'' + word.lower() + '\'not in dictionary!'
+                print ('WARNING: Word \'' + word.lower() + '\'not in dictionary!')
                 continue
             
             # Add the word id to the list.
@@ -233,7 +233,7 @@ class KeySearch(object):
         
         # Get the dictionary as a list of tuples.
         # The tuple is (word_id, count)
-        word_counts = [(key, value) for (key, value) in self.dictionary.dfs.iteritems()]
+        word_counts = [(key, value) for (key, value) in self.dictionary.dfs.items()]
         
         # Sort the list by the 'value' of the tuple (incidence count) 
         from operator import itemgetter
@@ -241,9 +241,9 @@ class KeySearch(object):
         
         # Print the most common words.
         # The list is sorted smallest to biggest, so...
-        print 'Top', topn, 'most frequent words'
+        print ('Top', topn, 'most frequent words')
         for i in range(-1, -topn, -1):
-            print '  %s   %d' % (self.dictionary[word_counts[i][0]].ljust(10), word_counts[i][1])
+            print ('  %s   %d' % (self.dictionary[word_counts[i][0]].ljust(10), word_counts[i][1]))
     
     def getVocabSize(self):
         """
@@ -336,7 +336,7 @@ class KeySearch(object):
         # Print the text indented slightly.
         pretty_text = textwrap.fill(dedented_text, initial_indent=indent, subsequent_indent=indent, width=80)
         
-        print pretty_text   
+        print (pretty_text)   
     
     def save(self, save_dir='./'):
         """

@@ -148,14 +148,14 @@ class CorpusBuilder(object):
         # Read in all of the stop words (one per line) and store them as a set.
         # The call to f.read().splitlines() reads the lines without the newline
         # char.           
-        with open(stop_words_file) as f:
+        with open(stop_words_file, encoding='utf8') as f:
             lines = f.read().splitlines()
             
             stoplist = []            
             
             # Decode the stop words
             for line in lines:
-                stoplist.append(line.decode(enc_format))
+                stoplist.append(line)
                 
             # Convert to a set representation.    
             self.stoplist = set(stoplist)               
@@ -269,7 +269,7 @@ class CorpusBuilder(object):
             
             # Decode the string into Unicode so the NLTK can handle it.
             try:    
-                line = line.decode(enc_format)        
+                line = line
             except:
                 print ('Failed to decode line', lineNum, ': ', line)
                 raise

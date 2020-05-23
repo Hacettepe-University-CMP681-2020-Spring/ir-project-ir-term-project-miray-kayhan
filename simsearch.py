@@ -202,7 +202,7 @@ class SimSearch(object):
             # Get the LSI vector for this document.    
             input_vec = self.lsi[self.ksearch.corpus_tfidf[i]]
         
-            print '  ' + self.ksearch.titles[i]
+            print ('  ' + self.ksearch.titles[i])
         
             # Calculate the similarities between this and all other entries.
             sims = self.index[input_vec]
@@ -338,7 +338,7 @@ class SimSearch(object):
         # Sort the similarities, biggest to smallest.    
         word_sims = sorted(enumerate(word_sims), key=lambda item: -item[1])
 
-        print 'Words in doc 1 which contribute most to similarity:'
+        print ('Words in doc 1 which contribute most to similarity:')
         self.printWordSims(word_sims, topn, min_pos, max_neg)
 
         # Calculate the contribution of each word in doc 2 to the similarity.
@@ -347,7 +347,7 @@ class SimSearch(object):
         # Sort the similarities, biggest to smallest.    
         word_sims = sorted(enumerate(word_sims), key=lambda item: -item[1])
 
-        print 'Words in doc 2 which contribute most to similarity:'
+        print ('Words in doc 2 which contribute most to similarity:')
         self.printWordSims(word_sims, topn, min_pos, max_neg)
     
 
@@ -390,10 +390,10 @@ class SimSearch(object):
             [similarity]   [document title]
             ...
         """
-        print 'Most similar documents:'
+        print ('Most similar documents:')
         for i in range(0, len(results)):
             # Print the similarity value followed by the entry title.            
-            print '  %.2f    %s' % (results[i][1], self.ksearch.titles[results[i][0]])
+            print ('  %.2f    %s' % (results[i][1], self.ksearch.titles[results[i][0]]))
 
     def printResultsByLineNumbers(self, results):
         """
@@ -402,35 +402,35 @@ class SimSearch(object):
             [similarity]   [source filename]  [line numbers]
             ...
         """        
-        print 'Most similar documents:'
+        print ('Most similar documents:')
         for i in range(0, len(results)):
             # Print the similarity value followed by the source file and line
             # numbers.
             line_nums = self.ksearch.getDocLocation(results[i][0])
                 
-            print '  %.2f    %s  Lines: %d - %d' % (results[i][1], line_nums[0], line_nums[1], line_nums[2])
+            print ('  %.2f    %s  Lines: %d - %d' % (results[i][1], line_nums[0], line_nums[1], line_nums[2]))
     
     def printResultsBySourceText(self, results, max_lines=10):
         """
         Print the supplied list of search results with their original source
         text.
         """
-        print 'Most similar documents:\n'
+        print ('Most similar documents:\n')
         for i in range(0, len(results)):            
             # Print the similarity value followed by the source file and line
             # numbers.            
             line_nums = self.ksearch.getDocLocation(results[i][0])
                 
-            print '  %.2f    %s  Lines: %d - %d' % (results[i][1], line_nums[0], line_nums[1], line_nums[2])
+            print ('  %.2f    %s  Lines: %d - %d' % (results[i][1], line_nums[0], line_nums[1], line_nums[2]))
 
             # Call down to the CorpusBuilder to print out the doc.
             self.ksearch.printDocSourcePretty(results[i][0], max_lines)
             
             # Separate the results with a line.
             if len(results) > 1:
-                print '\n'
-                print '--------------------------------------------------------------------------------'
-                print '\n'
+                print ('\n')
+                print ('--------------------------------------------------------------------------------')
+                print ('\n')
                 
     
     def save(self, save_dir='./'):
