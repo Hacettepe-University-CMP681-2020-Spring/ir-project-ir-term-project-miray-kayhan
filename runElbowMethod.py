@@ -41,7 +41,7 @@ for k in range(10, 200, 10):
     kmeans_model = KMeans(n_clusters=k, init='k-means++', max_iter=100)
     
     # Run clustering.
-    print 'K-Means with', k, 'clusters...'
+    print ('K-Means with', k, 'clusters...')
     kmeans_model.fit(X)
     
     # Get the resulting centroids
