@@ -17,13 +17,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1d6390e-a572-4559-b85f-b35e1b502b08" name="Default Changelist" comment="print comment branch1">
+      <change afterPath="$PROJECT_DIR$/runSilhouetteMethod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runElbowMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/runElbowMethod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runSearchByText.py" beforeDir="false" afterPath="$PROJECT_DIR$/runSearchByText.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -41,10 +50,31 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simsearch_deneme" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.runElbowMethod">
+    <configuration name="parseMHC" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ir-project-ir-term-project-miray-kayhan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parseMHC.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="runElbowMethod" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ir-project-ir-term-project-miray-kayhan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,34 +159,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simsearch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ir-project-ir-term-project-miray-kayhan" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\gokay\AppData\Local\Programs\Python\Python38\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simsearch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.runElbowMethod" />
         <item itemvalue="Python.runSearchByText" />
         <item itemvalue="Python.runSearchByKeyword" />
         <item itemvalue="Python.runSearchByDoc" />
-        <item itemvalue="Python.simsearch" />
+        <item itemvalue="Python.parseMHC" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590223003741</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Errors are fixed that came from switching Python version  2.7 to 3.8.">
+      <created>1590315886214</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590315886214</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,33 +304,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="484" y="8" key="#simsearch/0.0.1536.824@0.0.1536.824" timestamp="1590222651873" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590238470572">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1590339438482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590238470572" />
-    <state width="893" height="210" key="GridCell.Tab.0.bottom" timestamp="1590223161178">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1590339438482" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590412753805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="893" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590223161178" />
-    <state width="893" height="210" key="GridCell.Tab.0.center" timestamp="1590223161178">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590412753805" />
+    <state width="1515" height="201" key="GridCell.Tab.0.bottom" timestamp="1590412883352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="893" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590223161178" />
-    <state width="893" height="210" key="GridCell.Tab.0.left" timestamp="1590223161178">
+    <state width="1515" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590412883352" />
+    <state width="1515" height="201" key="GridCell.Tab.0.center" timestamp="1590412883352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="893" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590223161178" />
-    <state width="893" height="210" key="GridCell.Tab.0.right" timestamp="1590223161178">
+    <state width="1515" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590412883352" />
+    <state width="1515" height="201" key="GridCell.Tab.0.left" timestamp="1590412883352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="893" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590223161178" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1590217847000">
+    <state width="1515" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590412883352" />
+    <state width="1515" height="201" key="GridCell.Tab.0.right" timestamp="1590412883352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590217847000" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590223020060">
+    <state width="1515" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590412883352" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1590412331197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590223020060" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590412331197" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590315895706">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590315895706" />
   </component>
 </project>

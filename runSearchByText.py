@@ -61,6 +61,6 @@ for i in range(0, topn):
     # f -> Display full doc source.
     elif (command == 'f'):
         ksearch.printDocSourcePretty(results[i][0], max_lines=100)
-        raw_input('Press enter to continue...')
+        input('Press enter to continue...')
         
 
