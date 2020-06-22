@@ -44,6 +44,7 @@ ksearch = cb.toKeySearch()
 
 # Print the top 30 most common words.
 ksearch.printTopNWords(topn=30)
+#ksearch.LDA()
 
 print ('\nVocabulary contains', ksearch.getVocabSize(), 'unique words.')
 
@@ -51,10 +52,12 @@ print ('Corpus contains', len(ksearch.corpus_tfidf), '"documents" represented by
 
 # Initialize a SimSearch object from the KeySearch.
 ssearch = SimSearch(ksearch)
-
+ 
 # Train LSI with 100 topics.
 print ('\nTraining LSI...')
-ssearch.trainLSI(num_topics=300)
+# ssearch.trainLSI(num_topics=300)
+ssearch.trainLDA(num_topics=100)
+
 
 print ('\nSaving to disk...')
 if not exists('./mhc_corpus/'):

@@ -4,7 +4,8 @@ Created on Mon Oct 17 21:19:15 2016
 
 @author: Chris
 """
-
+import pandas as pd
+pd.set_option('display.max_rows', 500)
 import nltk
 import re
 from gensim import corpora
@@ -13,6 +14,11 @@ from collections import defaultdict
 from keysearch import KeySearch
 from os import listdir, makedirs
 from os.path import isfile, join, exists
+import logging
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.ERROR)
+
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 # I lazily made this a global constant so that I wouldn't have to include
@@ -407,19 +413,20 @@ class CorpusBuilder(object):
         self.dictionary = corpora.Dictionary(self.documents)
         
         # Map the documents to vectors.
-        corpus = [self.dictionary.doc2bow(text) for text in self.documents]
+        self.corpus = [self.dictionary.doc2bow(text) for text in self.documents]
 
         # Delete the tokenized representation of the documents--no need to
         # carry this around!
         del self.documents[:]
 
         # Convert the simple bag-of-words vectors to a tf-idf representation.        
-        self.tfidf_model = TfidfModel(corpus)
-        self.corpus_tfidf = self.tfidf_model[corpus]
-    
+        self.tfidf_model = TfidfModel(self.corpus)
+        self.corpus_tfidf = self.tfidf_model[self.corpus]
+
     def toKeySearch(self):
-        ksearch = KeySearch(self.dictionary, self.tfidf_model, 
+        ksearch = KeySearch(self.dictionary, self.tfidf_model,
                             self.corpus_tfidf, self.titles, self.tagsToDocs,
-                            self.docsToTags, self.files, self.doc_line_nums)        
-        
+                            self.docsToTags, self.files, self.doc_line_nums, self.documents,
+                            self.corpus)  # corpus--> self.corpus
+
         return ksearch

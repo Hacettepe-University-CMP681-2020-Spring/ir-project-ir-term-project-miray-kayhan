@@ -4,11 +4,13 @@ Created on Fri Oct 14 21:00:58 2016
 
 @author: Chris
 """
-
+import gensim
 from gensim.models import LsiModel
 from gensim import similarities
 from keysearch import KeySearch
 import numpy as np
+from gensim.utils import simple_preprocess
+from gensim.models import CoherenceModel
 
 class SimSearch(object):
     """
@@ -48,8 +50,40 @@ class SimSearch(object):
     
         # Transform corpus to LSI space and index it
         self.index = similarities.MatrixSimilarity(self.lsi[self.ksearch.corpus_tfidf], num_features=num_topics) 
-    
-    
+
+
+    # Train LDA
+    def trainLDA(self, num_topics=30):
+
+        self.num_topics = num_topics
+        self.lda = gensim.models.ldamodel.LdaModel(corpus=self.ksearch.corpus,
+                                                    id2word=self.ksearch.dictionary,
+                                                    num_topics=30,
+                                                    random_state=100,
+                                                    update_every=1,
+                                                    chunksize=100,
+                                                    passes=10,
+                                                    alpha='auto',
+                                                    per_word_topics=False)
+
+        
+        self.index = similarities.MatrixSimilarity(self.lda[self.ksearch.corpus_tfidf], num_features=num_topics)
+
+
+    """index = similarities.MatrixSimilarity(self.lda[self.ksearch.corpus])
+        index.save("simIndex.index")
+
+        docname = "input.txt"
+        doc = open(docname, 'r').read()
+        vec_bow = dictionary.doc2bow(doc.lower().split())
+        vec_lda = self.lda[vec_bow]
+
+        sims = index[vec_lda]
+        sims = sorted(enumerate(sims), key=lambda item: -item[1])
+        print
+        sims"""
+
+        
     def findSimilarToVector(self, input_tfidf, topn=10, in_corpus=False):
         """
         Find documents in the corpus similar to the provided document, 
@@ -442,7 +476,7 @@ class SimSearch(object):
 
         # Save the LSI model and the LSI index.        
         self.index.save(save_dir + 'index.mm')
-        self.lsi.save(save_dir + 'lsi.model')
+        self.lda.save(save_dir + 'lsi.model')
 
         # Save the underlying CorpusBuilder as well.        
         self.ksearch.save(save_dir)

@@ -8,8 +8,11 @@ Created on Tue Nov 22 11:31:44 2016
 import textwrap
 import pickle
 import nltk
+import gensim
 from gensim import corpora
 from gensim.models import TfidfModel
+from gensim.utils import simple_preprocess
+from gensim.models import CoherenceModel
 
 
 # I lazily made this a global constant so that I wouldn't have to include
@@ -47,7 +50,7 @@ class KeySearch(object):
 
     """
     def __init__(self, dictionary, tfidf_model, corpus_tfidf, titles, 
-                  tagsToDocs, docsToTags, files, doc_line_nums):
+                  tagsToDocs, docsToTags, files, doc_line_nums, documents, corpus):
         """
         KeySearch requires a completed gensim corpus, along with some 
         additional metadata
@@ -62,6 +65,8 @@ class KeySearch(object):
             files - Unique files in the corpus
             doc_line_nums - 
         """
+        self.corpus = corpus
+        self.documents = documents
         self.dictionary = dictionary
         self.tfidf_model = tfidf_model
         self.corpus_tfidf = corpus_tfidf
@@ -387,7 +392,68 @@ class KeySearch(object):
         
         ksearch = KeySearch(dictionary, tfidf_model, 
                             corpus_tfidf, titles, tagsToDocs,
-                            docsToTags, files, doc_line_nums) 
+                            docsToTags, files, doc_line_nums, documents, corpus )
         
         return ksearch
-            
+
+    def LDA(self):
+
+        lda_model = gensim.models.ldamodel.LdaModel(corpus=self.corpus,
+                                                    id2word=self.dictionary,
+                                                    num_topics=30,
+                                                    random_state=100,
+                                                    update_every=1,
+                                                    chunksize=100,
+                                                    passes=10,
+                                                    alpha='auto',
+                                                    per_word_topics=True)
+
+        print(lda_model.print_topics()[::1])
+        doc_lda = lda_model[self.corpus]
+
+        # Compute Perplexity
+        print('Perplexity: ',
+              lda_model.log_perplexity(self.corpus))  # a measure of how good the model is. lower the better.
+
+        # Compute Coherence Score
+        coherence_model_lda = CoherenceModel(model=lda_model, texts=self.documents, dictionary=self.dictionary,
+                                             coherence='c_v')
+        if __name__ == '__main__':
+            coherence_lda = coherence_model_lda.get_coherence()
+            print('Coherence Score: ', coherence_lda)
+
+    # Mallet wrapper added.
+    """def malletLDA(self):
+
+        ldamallet = gensim.models.wrappers.LdaMallet(mallet_path, corpus=self.corpus, num_topics=20, documents=self.documents)
+
+        limit = 35;
+        start = 2;
+        step = 1;
+        model_list, coherence_values = compute_coherence_values(dictionary=id2word,
+                                                                corpus=corpus,
+                                                                texts=data_lemmatized,
+                                                                start=start,
+                                                                limit=limit,
+                                                                step=step)
+
+        x = range(start, limit, step)
+        plt.figure(figsize=(15, 10))
+        plt.plot(x, coherence_values)
+        plt.xlabel("Num Topics")
+        plt.ylabel("Coherence score")
+        # plt.legend(("coherence_values"), loc='best')
+        plt.show()
+
+    def calculate_coherence_values(self, dictionary, corpus, input_text, limit, start, step=3):
+        coherence_values = []
+        model_list = []
+        for num_topics in range(start, limit, step):
+            print('Calculating {}- topic model'.format(num_topics))
+            model= gensim.models.wrappers.ldamallet(mallet_path, corpus=corpus, num_topics=num_topics, documents=documents)
+            model_list.append(model)
+            coherencemodel = CoherenceModel(model=model, texts=texts, dictionary=dictionary, coherence='c_v')
+            coherence_values.append(coherencemodel.get_coherence())
+        return model_list, coherence_values"""
+
+
